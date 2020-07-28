@@ -1,5 +1,5 @@
 @import "__reset.scss";
-@import "__ adaptation.scss";
+
 .block-header{
     @media screen and (max-width: 620px) {
         display: none; 
@@ -480,6 +480,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            @media screen and (max-width: 950px) {
+                display: grid;
+                width: 100%;
+                margin: 0 auto;
+                gap: 10px;
+                grid-template-columns: 1fr 1fr 1fr ;
+                grid-template-rows: 2fr;
+                padding: 10px;
+            }
             @media screen and (max-width: 620px) {
                 display: grid;
                 width: 400px;
@@ -668,17 +677,17 @@
                     font-size: 14px;
                     width: 80%;
                 }
-                &:last-child{
-                    margin: 0 0 28px 28px;
+                // &:last-child{
+                //     margin: 0 0 28px 28px;
 
-                    @media screen and (max-width: 960px) {
-                        margin: 0 0 28px 20px;
-                        font-size: 14px;
-                    }
-                    @media screen and (max-width: 620px) {
-                        margin: 0 0 20px 43px;
-                    }
-                }
+                //     @media screen and (max-width: 960px) {
+                //         margin: 0 0 28px 20px;
+                //         font-size: 14px;
+                //     }
+                //     @media screen and (max-width: 620px) {
+                //         margin: 0 0 20px 43px;
+                //     }
+                // }
                 
             }
         }
@@ -1438,6 +1447,7 @@
 }
 
 .block-footer{
+    display: none;
     position: fixed;
     left: 0px; bottom: 0; 
     // padding: 10px; /* Поля вокруг текста */
@@ -1455,10 +1465,14 @@
     &__li{
 
     }
+
+    @media screen and (max-width: 620px) {
+       display: block;
+    }
 }
 
 .fa-footer{
     font-size: 30px;
+    color: #fff;
+    -webkit-text-stroke: 0.5px black;
 }
-
-
