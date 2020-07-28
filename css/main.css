@@ -292,7 +292,7 @@ h1, h2 {
 .block-body__avatar--foto {
   border: 1px solid #000;
   margin: 15px;
-  background-image: url(/images/icon-user.jpg);
+  background-image: url(images/icon-user.jpg);
   background-size: cover;
   background-position: center;
   width: 270px;
@@ -723,7 +723,7 @@ h1, h2 {
   background-color: #ebebeb;
 }
 .block-body__container-message--foto {
-  background-image: url(/images/brother.jpg);
+  background-image: url(images/brother.jpg);
   background-size: cover;
   border-radius: 50%;
   width: 50px;
@@ -799,7 +799,7 @@ h1, h2 {
   background-color: #ebebeb;
 }
 .block-body__container-friends--foto {
-  background-image: url(/images/brother.jpg);
+  background-image: url(images/brother.jpg);
   background-size: cover;
   border-radius: 50%;
   width: 80px;
@@ -916,7 +916,7 @@ h1, h2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-image: url(/images/brother.jpg);
+  background-image: url(images/brother.jpg);
   background-size: cover;
   cursor: pointer;
 }
