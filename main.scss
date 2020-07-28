@@ -207,6 +207,8 @@
                 grid-template-columns: 1fr 2fr;
                 grid-template-rows: 220px auto auto auto;
                 gap: 0;
+                margin: 0;
+                padding: 0;
             }
 
         }
@@ -252,7 +254,7 @@
         &--foto{
             border: 1px solid #000;
             margin: 15px;
-            background-image: url(images/icon-user.jpg);
+            background-image: url(/images/icon-user.jpg);
             background-size: cover;
             background-position: center;
             width: 270px;
@@ -379,6 +381,7 @@
             font-family: $BaseFont;
             font-style: italic;
             padding: 15px 0 0 0;
+
             &> ul{
                 color: #6b6b6b;
                 padding: 15px 0 15px 15px;
@@ -407,6 +410,7 @@
                     }
                 }
             }
+
         }
 
         &--about-user{
