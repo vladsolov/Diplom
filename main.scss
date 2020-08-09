@@ -207,7 +207,6 @@
                 grid-template-columns: 1fr 2fr;
                 grid-template-rows: 220px auto auto auto;
                 gap: 0;
-                margin: 0;
                 padding: 0;
             }
 
@@ -221,6 +220,12 @@
                 grid-template-columns: 380px 200px;
             }
 
+            @media screen and (max-width: 620px) {
+                grid-template-columns: 3fr 1fr;
+                grid-template-rows: auto;
+                gap: 0;
+                padding: 0;
+            }
         }
 
         &--friends-grid{
@@ -250,6 +255,7 @@
 
     &__avatar {
         padding:0 0 15px 0;
+        position: relative;
 
         &--foto{
             border: 1px solid #000;
@@ -279,10 +285,10 @@
             cursor: pointer;
             transition: 0.3s;
 
-            @media screen and (max-width: 660px) {
+            @media screen and (max-width: 620px) {
                 position: absolute;
-                top: 20%;
-                left: -33%;
+                top: 85%;
+                left: -5%;
             }
 
             
@@ -314,12 +320,27 @@
            font-size: 16px;
            font-family: $BaseFont;
            font-weight: 600;
+
+            @media screen and (max-width: 430px) {
+                padding: 0;
+            }
         }
 
         &--online{
             padding: 0 0 0 30px;
             &>i{
                 font-size: 10px;
+            }
+            @media screen and (max-width: 430px) {
+                display: none;
+            }
+            
+            &-mob{
+                display: none;
+                @media screen and (max-width: 430px) {
+                    display: inline;
+                }
+                
             }
         }
 
@@ -328,12 +349,16 @@
             font-size: 16px;
             padding: 15px 0 0 54px;
             color: #6b6b6b;
-             
             @media screen and (max-width: 960px) {
                 font-size: 14px;
             }
             @media screen and (max-width: 620px) {
                 font-size: 16px;
+                padding: 0 15px;                
+            }
+            @media screen and (max-width: 430px) {
+                font-size: 14px;
+                padding: 0;                
             }
 
             &::before{
@@ -346,7 +371,10 @@
                 background-color: red;
                 transform: translateX(-100%);
                 background-color: $BackgroundColor;
-            
+                
+                @media screen and (max-width: 620px) {
+                    width: 0%;
+                }
             }
 
             &::after{
@@ -373,6 +401,9 @@
                 @media screen and (max-width: 960px) {
                     width: 52%;
                 }
+                @media screen and (max-width: 620px) {
+                    width: 0%;
+                }
 
             }
         }   
@@ -394,6 +425,10 @@
                     font-size: 14px;
                     padding: 20px 0 15px 20px;
                 }
+
+                @media screen and (max-width: 430px) {
+                    padding: 10px 0;
+                }
             }
 
             &>ul>li{
@@ -409,6 +444,10 @@
                        display: none;
                     }
                 }
+                @media screen and (max-width: 430px) {
+                    font-size: 13px;
+
+                }
             }
 
         }
@@ -416,6 +455,10 @@
         &--about-user{
             font-style: normal;
             color:#000;
+            @media screen and (max-width: 430px) {
+                font-size: 12px;
+            }
+            
         }
 
         &--more{
@@ -460,6 +503,12 @@
             @media screen and (max-width: 620px) {
                 display: block;
             }
+            @media screen and (max-width: 460px) {
+                font-size: 12px;
+            }
+            @media screen and (max-width: 460px) {
+               padding: 0;
+            }
         }
 
         .fa{
@@ -484,15 +533,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            @media screen and (max-width: 950px) {
-                display: grid;
-                width: 100%;
-                margin: 0 auto;
-                gap: 10px;
-                grid-template-columns: 1fr 1fr 1fr ;
-                grid-template-rows: 2fr;
-                padding: 10px;
-            }
+
             @media screen and (max-width: 620px) {
                 display: grid;
                 width: 400px;
@@ -501,6 +542,14 @@
                 grid-template-columns: 1fr 1fr 1fr ;
                 grid-template-rows: 2fr;
                 padding: 10px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 300px;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr 1fr ;
+                grid-template-rows: 2fr;
+            
             }
         }
         &--cell{
@@ -511,13 +560,21 @@
             border: 1px solid #000;
             cursor: pointer;
 
+            @media screen and (max-width: 960px){
+                margin: 7px;
+                height: 43px;
+                width: 43px;
+            }
             @media screen and (max-width: 620px) {
-                margin: 0;
                 height: 130px;
                 width: 130px;
-                
+            }
+            @media screen and (max-width: 500px) {
+                height: 80px;
+                width: 80px;
             }
         }
+        
         @media screen and (max-width: 620px) {
             grid-row-start: 0;
             grid-row-end: 0;
@@ -543,6 +600,12 @@
                 grid-template-rows: 1fr;
                 padding: 10px;
             }
+
+            @media screen and (max-width: 430px) {
+                display: grid;
+                width: 200px;
+                margin: 0 auto;
+            }
         }
         &--cell{
             margin: 0 15px;
@@ -556,9 +619,17 @@
                 width: 80px;
             }
             @media screen and (max-width: 620px) {
-                margin: 0;
                 height: 150px;
                 width: 150px;
+            }
+            @media screen and (max-width: 620px) {
+                height: 100px;
+                width: 100px;
+            }
+            @media screen and (max-width: 420px) {
+                margin: 0 10px;
+                height: 70px;
+                width: 70px;
             }
         }
         @media screen and (max-width: 620px) {
@@ -1448,13 +1519,16 @@
     &_active .block-menu__overlay{
         display: block;
     }
+
+    @media screen and (max-width: 620px) {
+        display: none;
+    }
 }
 
 .block-footer{
     display: none;
     position: fixed;
     left: 0px; bottom: 0; 
-    // padding: 10px; /* Поля вокруг текста */
     background: $BaseColor;
     color: #fff; 
     width: 100%; 
