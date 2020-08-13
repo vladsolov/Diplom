@@ -3013,5 +3013,6 @@
         speed: 500,
         prevArrow:'<div class="prev"></div>',
         nextArrow:'<div class="next"></div>',
+        mobileFirst: true,
       });
 }));

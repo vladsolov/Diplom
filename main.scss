@@ -222,7 +222,7 @@
             }
 
             @media screen and (max-width: 620px) {
-                grid-template-columns: 3fr 1fr;
+                grid-template-columns:1fr;
                 grid-template-rows: auto;
                 gap: 0;
                 padding: 0;
@@ -232,6 +232,13 @@
         &--friends-grid{
             grid-template-columns: 2fr 1fr;
             grid-template-rows: 0fr 1fr;
+
+            @media screen and (max-width: 620px) {
+                grid-template-columns:1fr;
+                grid-template-rows: auto;
+                gap: 0;
+                padding: 0;
+            }
         }
 
         &--fotos-grid{
@@ -791,7 +798,7 @@
         }
 
         &--foto{
-            background-image: url(images/brother.jpg);
+            background-image: url(../images/brother.jpg);
             background-size: cover;
             border-radius: 50%;
             width: 50px;
@@ -850,6 +857,9 @@
             font-size: 12px;
         }
         }
+        @media screen and (max-width: 620px) {
+            display: none;
+        }
     }
 
  /****************************Friend-page************************/         
@@ -883,10 +893,6 @@
             width: 80px;
             height: 80px;
             border: 1px solid #000;
-            position: absolute;
-            top:50%;
-            left: 7%;
-            transform: translate(-50%, -50%);
 
             @media screen and (max-width: 1240px) {
                 left: 8%;
@@ -982,6 +988,9 @@
                     border: 2px solid #ffc90e;
                 }
             }
+        }
+        @media screen and (max-width: 620px) {
+            display: none;
         }
     }
 
@@ -1384,7 +1393,8 @@
 
 }
 
-.block-caption{
+.block-caption,
+.block-caption__mob{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1403,9 +1413,15 @@
         font-size: 15px;
     }
     @media screen and (max-width:620px) {
-        border: no;
+        border: none;
     }
 
+    &__mob{
+        display: none;
+        @media screen and (max-width:620px) {
+            display: flex;
+        }
+    }
     
 }
 
@@ -1554,4 +1570,9 @@
     font-size: 30px;
     color: #fff;
     -webkit-text-stroke: 0.5px black;
+}
+
+.search-icon-mob{
+    position: absolute;
+    left: 100%  ;
 }
