@@ -99,7 +99,7 @@ h1, h2 {
   padding: 0 15px 0 0;
 }
 .block-search__authorization--icon-user {
-  background-image: url(/images/icon-user.jpg);
+  background-image: url(../images/icon-user.jpg);
   background-size: cover;
   border-radius: 50%;
   width: 40px;
