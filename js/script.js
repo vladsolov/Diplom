@@ -1,3 +1,11 @@
+$(".slider").slick({
+    fade:true,
+    speed: 500,
+    prevArrow:'<div class="prev"></div>',
+    nextArrow:'<div class="next"></div>',
+    mobileFirst: true,
+  });
+
 function BlockMenu(selector){
     let menu = $(selector);
     let button = menu.find('.block-menu__button');
