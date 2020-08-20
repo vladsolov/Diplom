@@ -245,11 +245,24 @@
             grid-template-columns: 1fr;
             grid-template-rows: auto;
 
+            @media screen and (max-width: 620px) {
+                grid-template-columns:1fr;
+                grid-template-rows: auto;
+                gap: 0;
+                padding: 0;
+            }
         }
         
         &--news-grid{
             grid-template-columns: 3fr 1fr;
             grid-template-rows: auto;
+
+            @media screen and (max-width: 620px) {
+                grid-template-columns:1fr;
+                grid-template-rows: auto;
+                gap: 0;
+                padding: 0;
+            }
         }
 
     &__box {
@@ -960,10 +973,15 @@
         grid-row-start: 2;
         height:200px;
 
+        &--news{
+            grid-row-start: 1;
+            grid-column-start: 2;
+            height:200px;
+            
+        }
         &--list{
             list-style: none;
             padding: 0 15px;
-
         } 
 
         &--categories{
@@ -1000,6 +1018,12 @@
         background-color: #fff;
         border: 1px solid #000;
     }
+        &__foto-container,
+        &__foto-comment{
+            @media screen and (max-width: 620px) {
+                border: none;
+            }
+        }
 
     &__comment-block{
         position: relative;
@@ -1010,7 +1034,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-image: url(images/brother.jpg);
+            background-image: url(../images/brother.jpg);
             background-size: cover;
             cursor: pointer;
         
@@ -1062,11 +1086,6 @@
             }
         }
     }
-
-    &__news-filter{
-        height: 210px;
-    }
-
 
     &__games{
         width: 1200px;
@@ -1335,8 +1354,10 @@
             max-height: 750px;
         }
         @media screen and (max-width: 960px) {
-            max-width: 540px;
-            
+            max-width: 540px;  
+        }
+        @media screen and (max-width: 620px) {
+            max-width: 440px;  
         }
 
         &__item {
@@ -1354,6 +1375,9 @@
                 display: block;
                 border: 1px solid #000;
                 cursor: pointer;
+                @media screen and (max-width: 620px) {
+                    border: none;  
+                }
             }
         }
     }
