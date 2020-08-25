@@ -1061,13 +1061,16 @@
 
     &__list-news{
         display: grid;
-        gap: 30px;
+        gap:30px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         padding: 15px 15px 30px 15px;
 
         @media screen and (max-width: 960px) {
             grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 620px) {
+            padding: 15px 50px 70px 50px;
         }
 
         &--container-news{
@@ -1083,6 +1086,9 @@
             }
             @media screen and (max-width: 960px) {
                 height: 200px;
+            }
+            @media screen and (max-width: 620px) {
+                height: 280px
             }
         }
     }
@@ -1357,7 +1363,19 @@
             max-width: 540px;  
         }
         @media screen and (max-width: 620px) {
+            max-width: 500px;  
+        }
+        @media screen and (max-width: 560px) {
             max-width: 440px;  
+        }
+        @media screen and (max-width: 480px) {
+            max-width: 360px; 
+        }
+        @media screen and (max-width: 400px) {
+            max-width: 340px; 
+        }
+        @media screen and (max-width: 380px) {
+            max-width: 330px; 
         }
 
         &__item {
