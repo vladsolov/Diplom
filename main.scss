@@ -1024,6 +1024,10 @@
                 border: none;
             }
         }
+    
+    &__foto-comment{
+        display: none;
+    }
 
     &__comment-block{
         position: relative;
@@ -1375,7 +1379,7 @@
             max-width: 340px; 
         }
         @media screen and (max-width: 380px) {
-            max-width: 330px; 
+            max-width: 370px; 
         }
 
         &__item {
